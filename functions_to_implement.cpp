@@ -61,7 +61,7 @@ int Factorial(int n){
     int fact=n;
     while(n>0){
         n=n-1;
-        fact=fac*n;
+        fact=fact*n;
     }
     return fact;
 };
