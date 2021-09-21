@@ -11,3 +11,10 @@ TEST_CASE ( "Factorials are tested", "[factorial]") {
   REQUIRE( Factorial(4) == 24 );
   REQUIRE( Factorial(11) == 39916800 );
 }
+
+TEST_CASE ( "Signs are tested (double)", "[sign]") {
+  REQUIRE( Sign(-1.0) == -1 );
+  REQUIRE( Sign(10.5) == 1 );
+  REQUIRE( Sign(0.0) == 1 );
+  REQUIRE( Sign(-4.2) == -1 );
+}
