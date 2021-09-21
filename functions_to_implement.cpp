@@ -1,7 +1,12 @@
+#include <iostream>
+#include <vector>
+
+
+
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
-std::vector<std::string> Split(std::string whole, std::string separator);
+std::vector<std::string> Split(std::string whole, std::string separator); //STEP 7 MODIFY THE CONTENTS
 
 // takes two strings and returns a new string that is the result of removing all occurrences of s2 from s1.
 std::string RemoveAllSubstrings(std::string s1, std::string s2);
@@ -54,16 +59,17 @@ int NthFibonacci(int n);
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n){
     int fact=n;
-    while(n>0){
+    if(n==0){fact=1};
+    while(n>1){
         n=n-1;
-        fact=fac*n;
+        fact=fact*n;
     }
     return fact;
 };
 
 // returns -1 if the number is negative and 1 if positive
 int Sign(int num){
-    if(num>0){
+    if(num>=0){
         return 1;
     } else {
         return -1;
@@ -110,10 +116,22 @@ double Sign(double num);
 
 
 // adds n to each element of the vector
-std::vector<int> AddN(std::vector<int>, int n);
+std::vector<int> AddN(std::vector<int> temp, int n){
+
+  for(int& x : temp)
+    x += n;
+  return temp;
+
+};
 
 // adds n to each element of the vector
-std::vector<double> AddN(std::vector<double>, double n);
+std::vector<double> AddN(std::vector<double> temp, double n){
+
+    for(double& x : temp)
+        x += n;
+    return temp;
+
+};
 
 // adds n to each element of the vector
 std::vector<std::string> AddN(std::vector<std::string>, std::string n);
@@ -124,3 +142,8 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+int main()
+{
+    return 0;
+}
