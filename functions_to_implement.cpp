@@ -97,10 +97,20 @@ double Sign(double num);
 
 
 // adds n to each element of the vector
-std::vector<int> AddN(std::vector<int>, int n);
+std::vector<int> AddN(std::vector<int> temp, int n){
+
+  for(int& x : temp)
+    x += n;
+
+};
 
 // adds n to each element of the vector
-std::vector<double> AddN(std::vector<double>, double n);
+std::vector<double> AddN(std::vector<double> temp, double n){
+
+for(double& x : temp)
+    x += n;
+
+};
 
 // adds n to each element of the vector
 std::vector<std::string> AddN(std::vector<std::string>, std::string n);
