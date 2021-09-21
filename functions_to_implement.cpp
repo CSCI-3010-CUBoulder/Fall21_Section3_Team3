@@ -119,7 +119,7 @@ std::vector<int> AddN(std::vector<int> temp, int n){
 
   for(int& x : temp)
     x += n;
-  return;
+  return temp;
 
 };
 
@@ -128,7 +128,7 @@ std::vector<double> AddN(std::vector<double> temp, double n){
 
     for(double& x : temp)
         x += n;
-    return;
+    return temp;
 
 };
 
