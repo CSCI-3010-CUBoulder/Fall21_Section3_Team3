@@ -23,12 +23,12 @@ TEST_CASE ( "Signs are tested (double)", "[sign]") {
 TEST_CASE ("addN function is tested (double)", "[vector_addN]") {
   std::vector<double> testVector{1.0,2.0,3.0,4.0,5.0};
   
-  double a = 2;
-  std::vector<int> bVector = ADDN(testVector, a);
+  int a = 2;
+  std::vector<double> bVector = ADDN(testVector, a);
   REQUIRE( (testVector[0] + a) == bVector[0] );
   
   a = 3;
-  std::vector<double> bVector = ADDN(testVector, a);
+  bVector = ADDN(testVector, a);
   REQUIRE( (testVector[1] + a) == bVector[1] );
   
   REQUIRE(testVector.size() == bVector.size());
