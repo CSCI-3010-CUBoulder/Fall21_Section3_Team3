@@ -58,17 +58,17 @@ int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n){
-    int fact=n;
-    if(n==0){fact=1};
-    while(n>1){
-        n=n-1;
-        fact=fact*n;
+
+    int fact = 1;
+    for(int i = n; i > 0; i--){
+        fact = fact * i;
     }
     return fact;
 };
 
 // returns -1 if the number is negative and 1 if positive
 int Sign(int num){
+
     if(num>=0){
         return 1;
     } else {
@@ -112,7 +112,13 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num);
+double Sign(double num){
+    if(num>=0.0){
+        return 1;
+    } else {
+        return -1;
+    }
+}
 
 
 // adds n to each element of the vector
