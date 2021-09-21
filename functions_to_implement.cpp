@@ -59,7 +59,8 @@ int NthFibonacci(int n);
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n){
     int fact=n;
-    while(n>0){
+    if(n==0){fact=1};
+    while(n>1){
         n=n-1;
         fact=fact*n;
     }
