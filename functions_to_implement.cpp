@@ -119,14 +119,16 @@ std::vector<int> AddN(std::vector<int> temp, int n){
 
   for(int& x : temp)
     x += n;
+  return;
 
 };
 
 // adds n to each element of the vector
 std::vector<double> AddN(std::vector<double> temp, double n){
 
-for(double& x : temp)
-    x += n;
+    for(double& x : temp)
+        x += n;
+    return;
 
 };
 
