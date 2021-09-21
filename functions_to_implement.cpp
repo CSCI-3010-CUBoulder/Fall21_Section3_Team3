@@ -69,7 +69,7 @@ int Factorial(int n){
 
 // returns -1 if the number is negative and 1 if positive
 int Sign(int num){
-    if(num>0){
+    if(num>=0){
         return 1;
     } else {
         return -1;
