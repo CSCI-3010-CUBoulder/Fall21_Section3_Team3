@@ -4,12 +4,12 @@
 #include <vector>
 
 
-TEST_CASE ( "Factorials are tested", "[factorial]") {
-  REQUIRE( Factorial(0) == 1 );
-  REQUIRE( Factorial(1) == 1 );
-  REQUIRE( Factorial(2) == 2 );
-  REQUIRE( Factorial(4) == 24 );
-  REQUIRE( Factorial(11) == 39916800 );
+TEST_CASE ( "Signs are tested", "[sign]") {
+  REQUIRE( Sign(0) == 1 );
+  REQUIRE( Sign(1) == 1 );
+  REQUIRE( Sign(-1) == -1 );
+  REQUIRE( Sign(4003293) == 1 );
+  REQUIRE( Sign(-113762874) == -1 );
 }
 
 TEST_CASE ( "Signs are tested (double)", "[sign]") {
